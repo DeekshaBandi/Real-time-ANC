@@ -1,0 +1,13 @@
+# Octave / MATLAB
+octave-workspace
+*.mat
+*.asv
+*.m~
+
+# Generated results (keep dir, ignore large/binary outputs)
+results/*.png
+results/*.pdf
+!results/.gitkeep
+
+# OS
+.DS_Store
