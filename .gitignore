@@ -9,5 +9,9 @@ results/*.png
 results/*.pdf
 !results/.gitkeep
 
+# C build artifacts + generated test vectors
+c/fxlms_rt
+c/data/*.txt
+
 # OS
 .DS_Store

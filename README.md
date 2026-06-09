@@ -66,7 +66,7 @@ octave --no-gui experiments/run_basic.m
 - [x] Phase 6 — FxLMS vs LMS + frequency analysis
 - [x] Phase 7 — MIMO extension  (2×2, **~44 dB** both mics)
 - [x] Phase 8 — feasibility report (`docs/feasibility_report.md`, `docs/derivation.md`)
-- [ ] Phase 9 — C port of the inner loop *(future)*
+- [x] Phase 9 — C port of the inner loop (`c/fxlms_rt.c`, matches MATLAB to 1e-8)
 
 ## Headline results
 
@@ -80,6 +80,14 @@ octave --no-gui experiments/run_basic.m
 | 2×2 MIMO FxLMS (cross-coupled) | **~44 dB** at both error mics |
 
 Run any experiment with `octave --no-gui experiments/<name>.m`; plots land in `results/`.
+
+### C port (real-time inner loop)
+
+```sh
+octave --no-gui experiments/export_cref.m   # export test vectors + MATLAB ref
+make -C c                                    # build
+./c/fxlms_rt c/data                          # run; matches MATLAB to ~1e-8
+```
 
 ## References
 
