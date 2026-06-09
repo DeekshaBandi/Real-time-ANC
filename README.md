@@ -64,7 +64,7 @@ octave --no-gui experiments/run_basic.m
 - [x] Phase 4 — core FxLMS  (**43.5 dB** steady-state reduction)
 - [x] Phase 5 — validation experiments
 - [x] Phase 6 — FxLMS vs LMS + frequency analysis
-- [ ] Phase 7 — MIMO extension *(future)*
+- [x] Phase 7 — MIMO extension  (2×2, **~44 dB** both mics)
 - [ ] Phase 8 — feasibility report *(future)*
 - [ ] Phase 9 — C port of the inner loop *(future)*
 
@@ -77,6 +77,7 @@ octave --no-gui experiments/run_basic.m
 | Stable step-size range | μ ≈ 0.005–0.07 (diverges ≥ 0.1) |
 | Robustness to delay error | holds until ±90° phase at top harmonic |
 | FxLMS vs plain LMS (same μ) | FxLMS +43 dB; LMS **diverges** |
+| 2×2 MIMO FxLMS (cross-coupled) | **~44 dB** at both error mics |
 
 Run any experiment with `octave --no-gui experiments/<name>.m`; plots land in `results/`.
 
