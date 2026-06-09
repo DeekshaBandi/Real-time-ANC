@@ -58,15 +58,27 @@ octave --no-gui experiments/run_basic.m
 ## Build phases
 
 - [x] Phase 0 — repo setup
-- [ ] Phase 1 — signal & system models
-- [ ] Phase 2 — FIR filter design
-- [ ] Phase 3 — secondary-path identification
-- [ ] Phase 4 — core FxLMS
-- [ ] Phase 5 — validation experiments
-- [ ] Phase 6 — FxLMS vs LMS + frequency analysis
+- [x] Phase 1 — signal & system models
+- [x] Phase 2 — FIR filter design
+- [x] Phase 3 — secondary-path identification
+- [x] Phase 4 — core FxLMS  (**43.5 dB** steady-state reduction)
+- [x] Phase 5 — validation experiments
+- [x] Phase 6 — FxLMS vs LMS + frequency analysis
 - [ ] Phase 7 — MIMO extension *(future)*
 - [ ] Phase 8 — feasibility report *(future)*
 - [ ] Phase 9 — C port of the inner loop *(future)*
+
+## Headline results
+
+| Experiment | Result |
+|---|---|
+| Single-channel FxLMS (periodic noise) | **~43 dB** reduction |
+| Secondary-path identification | 0.01% coef error, −59 dB MSE |
+| Stable step-size range | μ ≈ 0.005–0.07 (diverges ≥ 0.1) |
+| Robustness to delay error | holds until ±90° phase at top harmonic |
+| FxLMS vs plain LMS (same μ) | FxLMS +43 dB; LMS **diverges** |
+
+Run any experiment with `octave --no-gui experiments/<name>.m`; plots land in `results/`.
 
 ## References
 
