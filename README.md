@@ -65,7 +65,7 @@ octave --no-gui experiments/run_basic.m
 - [x] Phase 5 — validation experiments
 - [x] Phase 6 — FxLMS vs LMS + frequency analysis
 - [x] Phase 7 — MIMO extension  (2×2, **~44 dB** both mics)
-- [ ] Phase 8 — feasibility report *(future)*
+- [x] Phase 8 — feasibility report (`docs/feasibility_report.md`, `docs/derivation.md`)
 - [ ] Phase 9 — C port of the inner loop *(future)*
 
 ## Headline results
